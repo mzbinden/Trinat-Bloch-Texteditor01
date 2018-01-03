@@ -49,13 +49,10 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 
 ## User Stories 
 ### Ausbaustuffe 1
-| User Storie 1 	|  	|
-|-----------------------------------------------------------------------------	|------	|
-| Der Benutzer möchte dass sich beim Starten den Programms ein Fenster öffnet 	|  	|
-| Aktzeptanzkriterium 	|  	|
-| Nach dem Starten des Programms soll sich ein JFrame öffnen 	|  	|
-| Storie Points 	| 2 	|
-| Priorisierung 	| HOCH 	|
+| User Story 1 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 2 	|  	|
+| Der Benutzer möchte das sich beim starten des Programms ein Fenster öffnet 	|  	|  	| Nach dem Starten des Programms öffnet sich ein JFrame 	|
 
 ### Ausbaustuffe 2
 
