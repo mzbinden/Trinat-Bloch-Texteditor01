@@ -38,10 +38,24 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 
  
 ## Build-Anleitung 
+### Vorausgesetzungen
+* Korrekte Installation von Eclipse.
+* Richtig gesetztes Java Home Verzeichnis.
+* Korrekte Installation von Maven.
+* Korrekte Installation von Git.
+
 
 ## Kurze Bedienungsanleitung 
 
 ## User Stories 
+### Ausbaustuffe 1
+
+### Ausbaustuffe 2
+
+### Ausbaustuffe 3
+
+### Ausbaustuffe 4
+
 
 ## Release plan mit den Ausbaustufen
 
