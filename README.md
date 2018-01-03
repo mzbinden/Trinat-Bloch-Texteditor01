@@ -1,5 +1,8 @@
 # trinat-bloch-texteditor
 
+Das Projekt wurde durch EyHoCk, felixleitlein, G3r0m3, mzbinden und Flip87 erstellt.
+
+
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
 - [Build-Anleitung](#build-anleitung)
@@ -19,7 +22,20 @@
   * [Dokumentation wichtiger Code Snippets](#dokumentation-wichtiger-code-snippets)
   * [Herleitung der Testfälle aus den Akzeptanzkriterien der User Stories](#herleitung-der-testfälle-aus-den-azeptanzkriterien-der-user-stories)
 ## Einleitung
- odfhgpsnpdsg
+
+Hierbei handelt es sich um eine Gruppenarbeit welche im Rahmen der Kurse Programmieren II – JAVA und Software Engineering unseres Studiengangs Mechatronik Trinational, im dritten Semester anzufertigen war.
+
+Zweck dieses Projekts ist es die erlernten Programmierkenntnisse und die Prinzipien des Software Engineering anzuwenden.
+
+### Ziele
+Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textverarbeitung möglich ist. Die Verwendung des Programms soll auf dem Desktop eines MAC, Windows oder Linux Computer ausgeführt werden können. 
+### Randbedingungen
+ * Die Programmierung der Anwendung soll in JAVA erfolgen.
+ * Die Klassen des Programms sollen über die entsprechenden Unit-Tests verfügen.
+ * Das Projekt soll auf GitHub veröffentlich werden.
+ * Die Buildautomatisierung soll mit MAVEN erfolgen.
+ * Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
+
  
 ## Build-Anleitung 
 
