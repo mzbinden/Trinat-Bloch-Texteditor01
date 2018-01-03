@@ -72,6 +72,21 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 
 ### Ausbaustuffe 2
 
+| User Story 1 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 8 	|  	|
+| Der Benutzer möchte dass durch das Klicken auf den Button Speicher der eingegebene Text gespeichert wird	|  	|  	| Nach dem Klicken auf dem Speicher Button soll der eingegebene Text gespeichert werden 	|
+
+| User Story 2 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 8	|  	|
+| Der Benutzer möchte durch Klichen aud Laden eine zuvor gespeicherte Datei aufrufen können	|  	|  	| Beim Klicken auf den Lade Button soll eine zuvor gespeicherte Datei aufgerufen werden|
+
+| User Story 3 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| Niedrig	| 2	|  	|
+| Der Benutzer möchte Das im Frame der Titel des Programms angezeigt wird	|  	|  	| Sobald das Hauptfenster des Programms geöffnet wird soll im oberen Rahmen der Titel des Programms angezeigt werden	|
+
 ### Ausbaustuffe 3
 
 ### Ausbaustuffe 4
