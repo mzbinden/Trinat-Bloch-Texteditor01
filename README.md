@@ -54,6 +54,22 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 |  	| HOCH 	| 2 	|  	|
 | Der Benutzer möchte das sich beim starten des Programms ein Fenster öffnet 	|  	|  	| Nach dem Starten des Programms öffnet sich ein JFrame 	|
 
+| User Story 2 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 5 	|  	|
+| Der Benutzer möchte einen Text über die Tatstatur eingeben können 	|  	|  	| Beim Betätigen der Tastatur wird der eingegebene Text im Fenster angezeigt|
+
+| User Story 3 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 3	|  	|
+| Der Benutzer möchte das Programm durch klicken mit der Maus schließen können	|  	|  	| Nach dem Klicken auf den richtigen Butten wird das Programm geschloßen 	|
+
+| User Story 4 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 3 	|  	|
+| Der Benutzer möchte über einen Reiter, mit der Maus die Buttons für Schließen, Speichern, Laden angezeigt bekommen 	|  	|  Nach dem Klicken auf den entsprechenden Reiter werden die Buttons Schließen, Speichern und Laden angezeigt	| 	|
+
+
 ### Ausbaustuffe 2
 
 ### Ausbaustuffe 3
