@@ -4,17 +4,23 @@ import java.awt.Container;
 	import java.awt.GridLayout;
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
-	import javax.swing.*;
+import java.net.URISyntaxException;
+
+import javax.swing.*;
 	
 public class Test {
 
 		JTextField textField;
 		JTextArea textArea;
+		String eingegebenerText;
+		static Funktionen buttonaction = new Funktionen();
 		
 		public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
-		IllegalAccessException, UnsupportedLookAndFeelException {
+		IllegalAccessException, UnsupportedLookAndFeelException, URISyntaxException {
 			// TODO Auto-generated method stub
-
+			
+			
+			
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
 			new Test().creatFrame();
@@ -51,6 +57,13 @@ public class Test {
 
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+				String a = eingegebenerText;
+				try {
+					buttonaction.speichern(a);
+				} catch (URISyntaxException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				System.out.println("Speichern wurde betaetigt.");
 			}
 
@@ -76,7 +89,7 @@ public class Test {
 			
 					
 			// Regular text field (Row 1)
-				textField = new JTextField(100);
+				textField = new JTextField(10);
 				frame.add(textField);
 				textField.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -84,6 +97,7 @@ public class Test {
 			
 					}
 				});
+				eingegebenerText = textField.getText();
 		}
 
 		
