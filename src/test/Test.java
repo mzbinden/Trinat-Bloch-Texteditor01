@@ -76,7 +76,7 @@ public class Test {
 		
 		public void creatFrame() {
 			
-			JFrame frame = new JFrame("Mein erstes GUI");
+			JFrame frame = new JFrame("Texteditor_version:0.1");
 			
 			createMenuBar(frame);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
