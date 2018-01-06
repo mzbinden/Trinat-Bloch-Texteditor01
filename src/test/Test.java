@@ -39,15 +39,14 @@ public class Test {
 	private JTextPane editor__;
 	private UndoManager undoMgr__;
 	private String pictureButtonName__;
+	JTextField textField;
+	JTextArea textArea;
+	String eingegebenerText;
+	Funktionen buttonaction = new Funktionen();
 
 	private static final String MAIN_TITLE = "Text Editor Bloch - ";
 	private static final String ELEM = AbstractDocument.ElementNameAttribute;
 	private static final String COMP = StyleConstants.ComponentElementName;
-
-	JTextField textField;
-	JTextArea textArea;
-	String eingegebenerText;
-	private Funktionen buttonaction = new Funktionen();
 
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException, UnsupportedLookAndFeelException, URISyntaxException {
@@ -86,22 +85,56 @@ public class Test {
 	private class SpeichernActionListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			String a = eingegebenerText;
-			try {
-				buttonaction.speichern(a);
-			} catch (URISyntaxException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+
+			if (file__ == null) {
+
+				file__ = chooseFile();
+
+				if (file__ == null) {
+
+					return;
+				}
 			}
-			System.out.println("Speichern wurde betaetigt.");
+
+			DefaultStyledDocument doc = (DefaultStyledDocument) getEditorDocument();
+
+			try (OutputStream fos = new FileOutputStream(file__);
+					ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+				oos.writeObject(doc);
+			} catch (IOException ex) {
+
+				throw new RuntimeException(ex);
+			}
+
+			setFrameTitleWithExtn(file__.getName());
 		}
+
+		private File chooseFile() {
+
+			JFileChooser chooser = new JFileChooser();
+
+			if (chooser.showSaveDialog(frame__) == JFileChooser.APPROVE_OPTION) {
+
+				return chooser.getSelectedFile();
+			} else {
+				return null;
+			}
+		}
+
+		/*
+		 * public void actionPerformed(ActionEvent e) { // TODO Auto-generated
+		 * method stub String a = eingegebenerText; try {
+		 * buttonaction.speichern(a); } catch (URISyntaxException e1) { // TODO
+		 * Auto-generated catch block e1.printStackTrace(); }
+		 * System.out.println("Speichern wurde betaetigt."); }
+		 */
 
 	}
 
 	public void creatFrame() {
 
-		JFrame frame = new JFrame("Texteditor_version:0.1");
+		JFrame frame = new JFrame(MAIN_TITLE);
 
 		createMenuBar(frame);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -149,13 +182,12 @@ public class Test {
 		dateiMenu.add(beendenItem);
 
 	}
-	
+
 	// Versuch das Speicher Frame aus mas-swing-samples zu übernehmen
-	// ohne anpassung 
+	// ohne anpassung
 
-	private class OpenFileListener implements ActionListener {
+	private class ÖffnenFileListener implements ActionListener {
 
-		@Override
 		public void actionPerformed(ActionEvent e) {
 
 			file__ = chooseFile();
@@ -224,7 +256,7 @@ public class Test {
 
 		frame__.setTitle(MAIN_TITLE + titleExtn);
 	}
-	
+
 	private class UndoEditListener implements UndoableEditListener {
 
 		@Override
@@ -233,7 +265,7 @@ public class Test {
 			undoMgr__.addEdit(e.getEdit()); // remember the edit
 		}
 	}
-	
+
 	private class PictureFocusListener implements FocusListener {
 
 		@Override
@@ -243,53 +275,11 @@ public class Test {
 			button.setBorder(new LineBorder(Color.GRAY));
 			pictureButtonName__ = button.getName();
 		}
-		
+
 		@Override
 		public void focusLost(FocusEvent e) {
 
 			((JButton) e.getComponent()).setBorder(new LineBorder(Color.WHITE));
-		}
-	}
-	
-	private class SaveFileListener implements ActionListener {
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-
-			if (file__ == null) {
-
-				file__ = chooseFile();
-
-				if (file__ == null) {
-
-					return;
-				}
-			}
-
-			DefaultStyledDocument doc = (DefaultStyledDocument) getEditorDocument();
-
-			try (OutputStream fos = new FileOutputStream(file__);
-					ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-
-				oos.writeObject(doc);
-			} catch (IOException ex) {
-
-				throw new RuntimeException(ex);
-			}
-
-			setFrameTitleWithExtn(file__.getName());
-		}
-
-		private File chooseFile() {
-
-			JFileChooser chooser = new JFileChooser();
-
-			if (chooser.showSaveDialog(frame__) == JFileChooser.APPROVE_OPTION) {
-
-				return chooser.getSelectedFile();
-			} else {
-				return null;
-			}
 		}
 	}
 
