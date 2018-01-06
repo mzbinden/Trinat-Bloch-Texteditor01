@@ -13,7 +13,7 @@ public class Test {
 		JTextField textField;
 		JTextArea textArea;
 		String eingegebenerText;
-		static Funktionen buttonaction = new Funktionen();
+		private Funktionen buttonaction = new Funktionen();
 		
 		public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
 		IllegalAccessException, UnsupportedLookAndFeelException, URISyntaxException {
