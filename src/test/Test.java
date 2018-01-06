@@ -2,6 +2,7 @@ package test;
 
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -33,11 +34,11 @@ import javax.swing.undo.UndoManager;
 
 public class Test {
 
-	private File file__;
-	private JFrame frame__;
-	private JTextPane editor__;
-	private UndoManager undoMgr__;
-	private String pictureButtonName__;
+	static File file__;
+	static JFrame frame__;
+	static JTextPane editor__;
+	static UndoManager undoMgr__;
+	static String pictureButtonName__;
 	static JTextField textField;
 	static JTextArea textArea;
 	static String eingegebenerText;
@@ -56,7 +57,6 @@ public class Test {
 		new Test().creatFrame();
 	}
 
-	
 	private class ExitActionListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
@@ -65,14 +65,14 @@ public class Test {
 		}
 	};
 
-	private class ButtonListener implements ActionListener {
-
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			System.out.println("Button wurde betaetigt.");
-		}
-
-	}
+	/*
+	 * private class ButtonListener implements ActionListener {
+	 * 
+	 * public void actionPerformed(ActionEvent e) { // TODO Auto-generated
+	 * method stub System.out.println("Button wurde betaetigt."); }
+	 * 
+	 * }
+	 */
 
 	@SuppressWarnings("unused")
 	public void creatFrame() {
@@ -80,39 +80,43 @@ public class Test {
 		frame__ = new JFrame(MAIN_TITLE);
 
 		createMenuBar(frame__);
-		frame__.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 
 		Container contentPane = frame__.getContentPane();
 
 		frame__.pack();
 		frame__.setSize(500, 800);
-		frame__.setVisible(true);
-		
-		
-		// Regular text field (Row 1)
-		/*textField = new JTextField(10);
-		frame__.add(textField);
-		
-		textField.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textArea.append("\nYou have typed " + textField.getText());
+		frame__.setLocation(80,80);
+		frame__.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-			}
-		});
-		eingegebenerText = textField.getText();
-		*/
+		// Regular text field (Row 1)
+		/*
+		 * textField = new JTextField(10); 
+		 * frame__.add(textField);
+		 * textField.addActionListener(new ActionListener() { public void
+		 * actionPerformed(ActionEvent e) { textArea.append("\nYou have typed "
+		 * + textField.getText());
+		 * 
+		 * } }); eingegebenerText = textField.getText();
+		 */
+
 		// Try to include a Textpane instead
+
 		editor__ = new JTextPane();
 		JScrollPane editorScrollPane = new JScrollPane(editor__);
 
+	
+		
 		editor__.setDocument(getNewDocument());
+		editor__.setEditable(true);
 		frame__.add(editor__);
 		frame__.add(editorScrollPane);
-		
-		
+		frame__.setVisible(true);
+		editor__.requestFocusInWindow();
 	}
+
 	private StyledDocument getNewDocument() {
-		
+
 		StyledDocument doc = new DefaultStyledDocument();
 		doc.addUndoableEditListener(new UndoEditListener());
 		return doc;
@@ -145,7 +149,6 @@ public class Test {
 	}
 
 	// Versuch das Speicher Frame aus mas-swing-samples zu übernehmen
-	
 
 	private class SpeichernActionListener implements ActionListener {
 
@@ -196,7 +199,7 @@ public class Test {
 		 */
 
 	}
-	
+
 	private class OpenFileListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
@@ -242,25 +245,22 @@ public class Test {
 
 			editor__.setDocument(doc);
 			doc.addUndoableEditListener(new UndoEditListener());
-			applyFocusListenerToPictures(doc);
+			// applyFocusListenerToPictures(doc);
 		}
-
-		private void applyFocusListenerToPictures(StyledDocument doc) {
-
-			ElementIterator iterator = new ElementIterator(doc);
-			Element element;
-
-			while ((element = iterator.next()) != null) {
-
-				AttributeSet attrs = element.getAttributes();
-
-				if (attrs.containsAttribute(ELEM, COMP)) {
-
-					JButton picButton = (JButton) StyleConstants.getComponent(attrs);
-					picButton.addFocusListener(new PictureFocusListener());
-				}
-			}
-		}
+		/*
+		 * private void applyFocusListenerToPictures(StyledDocument doc) {
+		 * 
+		 * ElementIterator iterator = new ElementIterator(doc); Element element;
+		 * 
+		 * while ((element = iterator.next()) != null) {
+		 * 
+		 * AttributeSet attrs = element.getAttributes();
+		 * 
+		 * if (attrs.containsAttribute(ELEM, COMP)) {
+		 * 
+		 * JButton picButton = (JButton) StyleConstants.getComponent(attrs);
+		 * picButton.addFocusListener(new PictureFocusListener()); } } }
+		 */
 	}
 
 	private void setFrameTitleWithExtn(String titleExtn) {
@@ -277,22 +277,19 @@ public class Test {
 		}
 	}
 
-	private class PictureFocusListener implements FocusListener {
-
-		@Override
-		public void focusGained(FocusEvent e) {
-
-			JButton button = (JButton) e.getComponent();
-			button.setBorder(new LineBorder(Color.GRAY));
-			pictureButtonName__ = button.getName();
-		}
-
-		@Override
-		public void focusLost(FocusEvent e) {
-
-			((JButton) e.getComponent()).setBorder(new LineBorder(Color.WHITE));
-		}
-	}
+	// Unimportant at the moment !
+	/*
+	 * private class PictureFocusListener implements FocusListener {
+	 * 
+	 * @Override public void focusGained(FocusEvent e) {
+	 * 
+	 * JButton button = (JButton) e.getComponent(); button.setBorder(new
+	 * LineBorder(Color.GRAY)); pictureButtonName__ = button.getName(); }
+	 * 
+	 * @Override public void focusLost(FocusEvent e) {
+	 * 
+	 * ((JButton) e.getComponent()).setBorder(new LineBorder(Color.WHITE)); } }
+	 */
 
 	private StyledDocument getEditorDocument() {
 
