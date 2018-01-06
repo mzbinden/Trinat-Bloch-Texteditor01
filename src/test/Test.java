@@ -1,5 +1,6 @@
 package test;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -34,15 +35,15 @@ import javax.swing.undo.UndoManager;
 
 public class Test {
 
-	static File file__;
-	static JFrame frame__;
-	static JTextPane editor__;
-	static UndoManager undoMgr__;
-	static String pictureButtonName__;
-	static JTextField textField;
-	static JTextArea textArea;
-	static String eingegebenerText;
-	static Funktionen buttonaction = new Funktionen();
+	private File file__;
+	private JFrame frame__;
+	private JTextPane editor__;
+	private UndoManager undoMgr__;
+	private String pictureButtonName__;
+	private JTextField textField;
+	private JTextArea textArea;
+	private String eingegebenerText;
+	private Funktionen buttonaction = new Funktionen();
 
 	private static final String MAIN_TITLE = "Text Editor Bloch - ";
 	private static final String ELEM = AbstractDocument.ElementNameAttribute;
@@ -74,7 +75,7 @@ public class Test {
 	 * }
 	 */
 
-	@SuppressWarnings("unused")
+	
 	public void creatFrame() {
 
 		frame__ = new JFrame(MAIN_TITLE);
@@ -82,7 +83,7 @@ public class Test {
 		createMenuBar(frame__);
 		
 
-		Container contentPane = frame__.getContentPane();
+		//Container contentPane = frame__.getContentPane();
 
 		frame__.pack();
 		frame__.setSize(500, 800);
@@ -109,9 +110,9 @@ public class Test {
 		
 		editor__.setDocument(getNewDocument());
 		editor__.setEditable(true);
-		frame__.add(editor__);
-		frame__.add(editorScrollPane);
-		frame__.setVisible(true);
+		
+		frame__.add(editorScrollPane, BorderLayout.CENTER);
+		
 		editor__.requestFocusInWindow();
 	}
 
