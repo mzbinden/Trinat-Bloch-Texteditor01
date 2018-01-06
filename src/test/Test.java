@@ -2,7 +2,6 @@ package test;
 
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -39,10 +38,10 @@ public class Test {
 	private JTextPane editor__;
 	private UndoManager undoMgr__;
 	private String pictureButtonName__;
-	JTextField textField;
-	JTextArea textArea;
-	String eingegebenerText;
-	Funktionen buttonaction = new Funktionen();
+	static JTextField textField;
+	static JTextArea textArea;
+	static String eingegebenerText;
+	static Funktionen buttonaction = new Funktionen();
 
 	private static final String MAIN_TITLE = "Text Editor Bloch - ";
 	private static final String ELEM = AbstractDocument.ElementNameAttribute;
@@ -57,14 +56,7 @@ public class Test {
 		new Test().creatFrame();
 	}
 
-	private class OpenActionListener implements ActionListener {
-
-		public void actionPerformed(ActionEvent e) {
-			System.out.println("Oeffnen wurde ausgewählt.");
-
-		}
-	};
-
+	
 	private class ExitActionListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
@@ -81,6 +73,79 @@ public class Test {
 		}
 
 	}
+
+	@SuppressWarnings("unused")
+	public void creatFrame() {
+
+		frame__ = new JFrame(MAIN_TITLE);
+
+		createMenuBar(frame__);
+		frame__.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		Container contentPane = frame__.getContentPane();
+
+		frame__.pack();
+		frame__.setSize(500, 800);
+		frame__.setVisible(true);
+		
+		
+		// Regular text field (Row 1)
+		/*textField = new JTextField(10);
+		frame__.add(textField);
+		
+		textField.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textArea.append("\nYou have typed " + textField.getText());
+
+			}
+		});
+		eingegebenerText = textField.getText();
+		*/
+		// Try to include a Textpane instead
+		editor__ = new JTextPane();
+		JScrollPane editorScrollPane = new JScrollPane(editor__);
+
+		editor__.setDocument(getNewDocument());
+		frame__.add(editor__);
+		frame__.add(editorScrollPane);
+		
+		
+	}
+	private StyledDocument getNewDocument() {
+		
+		StyledDocument doc = new DefaultStyledDocument();
+		doc.addUndoableEditListener(new UndoEditListener());
+		return doc;
+	}
+
+	private void createMenuBar(JFrame frame) {
+
+		// Menuezeile (JMenuBar) erzeugen und in das Fenster (JFrame) einfuegen
+		JMenuBar bar = new JMenuBar();
+		frame.setJMenuBar(bar);
+
+		// Menue (JMenu) erzeugen und in die Menuezeile (JMenuBar) eifuegen
+		JMenu dateiMenu = new JMenu("Datei");
+		bar.add(dateiMenu);
+
+		// Menueeintraege (JMenuItem) erzeugen und dem Menue (JMenu) "Datei"
+		// hinzufügen
+		JMenuItem speichernItem = new JMenuItem("Speichern");
+		speichernItem.addActionListener(new SpeichernActionListener());
+		dateiMenu.add(speichernItem);
+
+		JMenuItem oeffnenItem = new JMenuItem("Öffnen");
+		oeffnenItem.addActionListener(new OpenFileListener());
+		dateiMenu.add(oeffnenItem);
+
+		JMenuItem beendenItem = new JMenuItem("Beenden");
+		beendenItem.addActionListener(new ExitActionListener());
+		dateiMenu.add(beendenItem);
+
+	}
+
+	// Versuch das Speicher Frame aus mas-swing-samples zu übernehmen
+	
 
 	private class SpeichernActionListener implements ActionListener {
 
@@ -121,7 +186,7 @@ public class Test {
 				return null;
 			}
 		}
-
+		// Alter Teil von Matthias durch aufruf von Klasse Funktionen
 		/*
 		 * public void actionPerformed(ActionEvent e) { // TODO Auto-generated
 		 * method stub String a = eingegebenerText; try {
@@ -131,62 +196,8 @@ public class Test {
 		 */
 
 	}
-
-	public void creatFrame() {
-
-		JFrame frame = new JFrame(MAIN_TITLE);
-
-		createMenuBar(frame);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		Container contentPane = frame.getContentPane();
-
-		frame.pack();
-		frame.setSize(500, 800);
-		frame.setVisible(true);
-
-		// Regular text field (Row 1)
-		textField = new JTextField(10);
-		frame.add(textField);
-		textField.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textArea.append("\nYou have typed " + textField.getText());
-
-			}
-		});
-		eingegebenerText = textField.getText();
-	}
-
-	private void createMenuBar(JFrame frame) {
-
-		// Menuezeile (JMenuBar) erzeugen und in das Fenster (JFrame) einfuegen
-		JMenuBar bar = new JMenuBar();
-		frame.setJMenuBar(bar);
-
-		// Menue (JMenu) erzeugen und in die Menuezeile (JMenuBar) eifuegen
-		JMenu dateiMenu = new JMenu("Datei");
-		bar.add(dateiMenu);
-
-		// Menueeintraege (JMenuItem) erzeugen und dem Menue (JMenu) "Datei"
-		// hinzufügen
-		JMenuItem speichernItem = new JMenuItem("Speichern");
-		speichernItem.addActionListener(new SpeichernActionListener());
-		dateiMenu.add(speichernItem);
-
-		JMenuItem oeffnenItem = new JMenuItem("Öffnen");
-		oeffnenItem.addActionListener(new OpenActionListener());
-		dateiMenu.add(oeffnenItem);
-
-		JMenuItem beendenItem = new JMenuItem("Beenden");
-		beendenItem.addActionListener(new ExitActionListener());
-		dateiMenu.add(beendenItem);
-
-	}
-
-	// Versuch das Speicher Frame aus mas-swing-samples zu übernehmen
-	// ohne anpassung
-
-	private class ÖffnenFileListener implements ActionListener {
+	
+	private class OpenFileListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
 
