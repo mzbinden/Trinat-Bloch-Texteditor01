@@ -39,7 +39,7 @@ public class TextEditor {
 	private JTextPane editor__;
 	private File file__;
 	private String Text;
-
+	int e = 40;
 	private static final String MAIN_TITLE = "Texteditor test - ";
 	private static final String DEFAULT_FONT_FAMILY = "SansSerif"; // !eventuell
 																	// nicht
