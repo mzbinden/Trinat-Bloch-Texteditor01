@@ -66,8 +66,9 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 
 | User Story 4 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
 |----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
-|  	| HOCH 	| 3 	|  	|
-| Der Benutzer möchte über einen Reiter, mit der Maus die Buttons für Schließen, Speichern, Laden angezeigt bekommen 	|  |	|  Nach dem Klicken auf den entsprechenden Reiter werden die Buttons Schließen, Speichern und Laden angezeigt		|
+|  	| HOCH 	| 3	|  	|
+| Der Benutzer möchte über einen Reiter, mit der Maus die Buttons für Schließen, Speichern, Laden angezeigt bekommen	|  	|  	| Nach dem Klicken auf den entsprechenden Reiter werden die Buttons Schließen, Speichern und Laden angezeigt 	|
+
 
 
 ### Ausbaustuffe 2
