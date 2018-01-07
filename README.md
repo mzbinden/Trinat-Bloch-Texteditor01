@@ -69,10 +69,6 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 |  	| HOCH 	| 3 	|  	|
 | Der Benutzer möchte über einen Reiter, mit der Maus die Buttons für Schließen, Speichern, Laden angezeigt bekommen 	|  	|  Nach dem Klicken auf den entsprechenden Reiter werden die Buttons Schließen, Speichern und Laden angezeigt	| 	|
 
-| User Story 5 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
-|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
-|  	| MITTEL 	| 2 	|  	|
-| Der Benutzer möchte über einen Knopfdruck das Programm beenden und schliessen können. 	|  	| Nach dem Klick auf den Entsprechenden Button wird das Programm geschlossen. 	| 	|
 
 ### Ausbaustufe 2
 
@@ -95,18 +91,28 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 
 | User Story 1 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
 |----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
-|  	| HOCH 	| 8 	|  	|
-| Der Benutzer möchte dass durch das Klicken auf den Button Speicher der eingegebene Text gespeichert wird	|  	|  	| Nach dem Klicken auf dem Speicher Button soll der eingegebene Text gespeichert werden 	|
+|  	| HOCH 	| 3 	|  	|
+| Der Benutzer möchte dass durch das Klicken auf den Button 'Neu' eine neue Datei geöfnet wird	|  	|  	| Nach dem Klicken auf den 'Neu' Button öffnet sich ein Neues Textfeld. 	|
 
 | User Story 2 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
 |----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
 |  	| HOCH 	| 8	|  	|
-| Der Benutzer möchte durch Klichen aud Laden eine zuvor gespeicherte Datei aufrufen können	|  	|  	| Beim Klicken auf den Lade Button soll eine zuvor gespeicherte Datei aufgerufen werden|
+| Der Benutzer möchte durch Klichen aud Laden eine zuvor gespeicherte Datei aufrufen können	|  	|  	| Nach dem Klicken auf den 'Löschen' Button wird die ausgewählte Datei gelöscht|
 
 | User Story 3 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
 |----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| Mittel	| 2	|  	|
+| Der Benutzer möchte mittel Hotkeys das Menu öffnen können	|  	|  	| Durch betätigen eines Hotkeys wir das Menu geöfnet	|
+
+| User Story 4 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| Mittel	| 2	|  	|
+| Der Benutzer möchte mittel Hotkeys die Befehle 'Öffnen', 'Speichern', 'Neu' und 'Löschen' ausführen können.	|  	|  	| Durch betätigen von Hotkeys können die Befehle 'Öffnen', 'Speichern', 'Neu' und 'Löschen' ausführen werden	|
+
+| User Story 5 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
 |  	| Niedrig	| 2	|  	|
-| Der Benutzer möchte Das im Frame der Titel des Programms angezeigt wird	|  	|  	| Sobald das Hauptfenster des Programms geöffnet wird soll im oberen Rahmen der Titel des Programms angezeigt werden	|
+| Der Benutzer möchte mittels einer Desktopverknüpfung das Programm direkt öffen können	|  	|  	| Durch betätigen einer Desktopverknüpfung wir das Programm direkt aufgerufen	|
 
 ### Ausbaustufe 4
 
