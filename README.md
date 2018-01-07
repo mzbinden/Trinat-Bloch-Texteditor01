@@ -48,7 +48,7 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 ## Kurze Bedienungsanleitung 
 
 ## User Stories 
-### Ausbaustuffe 1
+### Ausbaustufe 1
 | User Story 1 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
 |----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
 |  	| HOCH 	| 2 	|  	|
@@ -70,7 +70,7 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 | Der Benutzer möchte über einen Reiter, mit der Maus die Buttons für Schließen, Speichern, Laden angezeigt bekommen 	|  	|  Nach dem Klicken auf den entsprechenden Reiter werden die Buttons Schließen, Speichern und Laden angezeigt	| 	|
 
 
-### Ausbaustuffe 2
+### Ausbaustufe 2
 
 | User Story 1 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
 |----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
@@ -87,9 +87,24 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 |  	| Niedrig	| 2	|  	|
 | Der Benutzer möchte Das im Frame der Titel des Programms angezeigt wird	|  	|  	| Sobald das Hauptfenster des Programms geöffnet wird soll im oberen Rahmen der Titel des Programms angezeigt werden	|
 
-### Ausbaustuffe 3
+### Ausbaustufe 3
 
-### Ausbaustuffe 4
+| User Story 1 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 8 	|  	|
+| Der Benutzer möchte dass durch das Klicken auf den Button Speicher der eingegebene Text gespeichert wird	|  	|  	| Nach dem Klicken auf dem Speicher Button soll der eingegebene Text gespeichert werden 	|
+
+| User Story 2 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| HOCH 	| 8	|  	|
+| Der Benutzer möchte durch Klichen aud Laden eine zuvor gespeicherte Datei aufrufen können	|  	|  	| Beim Klicken auf den Lade Button soll eine zuvor gespeicherte Datei aufgerufen werden|
+
+| User Story 3 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| Niedrig	| 2	|  	|
+| Der Benutzer möchte Das im Frame der Titel des Programms angezeigt wird	|  	|  	| Sobald das Hauptfenster des Programms geöffnet wird soll im oberen Rahmen der Titel des Programms angezeigt werden	|
+
+### Ausbaustufe 4
 
 
 ## Release plan mit den Ausbaustufen
