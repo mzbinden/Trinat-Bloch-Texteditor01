@@ -69,6 +69,10 @@ Es soll eine kleines Programm erstellt werden mit welchem eine einfache Textvera
 |  	| HOCH 	| 3 	|  	|
 | Der Benutzer möchte über einen Reiter, mit der Maus die Buttons für Schließen, Speichern, Laden angezeigt bekommen 	|  	|  Nach dem Klicken auf den entsprechenden Reiter werden die Buttons Schließen, Speichern und Laden angezeigt	| 	|
 
+| User Story 5 	| Priorisierung 	| Story Point 	| Aktzeptanzkriterium 	|
+|----------------------------------------------------------------------------	|:-------------:	|------------:	|-------------------------------------------------------	|
+|  	| MITTEL 	| 2 	|  	|
+| Der Benutzer möchte über einen Knopfdruck das Programm beenden und schliessen können. 	|  	| Nach dem Klick auf den Entsprechenden Button wird das Programm geschlossen. 	| 	|
 
 ### Ausbaustufe 2
 
